@@ -1,6 +1,9 @@
- const { SlashCommandBuilder, EmbedBuilder } = require('discord.js')
+ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { name } = require('./commandlist');
 
  module.exports = {
+    name: 'timer',
+    description: 'Start a timer.',
     data: new SlashCommandBuilder ()
     .setName('timer')
     .setDescription('Start a timer.')

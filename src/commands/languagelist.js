@@ -4,7 +4,7 @@ module.exports = {
   name: 'languages',
   description: 'List all available commands.',
   async execute (message, args) {
-    const reapers = new EmbedBuilder()
+    const languages = new EmbedBuilder()
       .setTitle('Available Translations')
       .setDescription('All the available languages.')
       .setColor('DarkButNotBlack')
@@ -32,6 +32,6 @@ module.exports = {
       )
       .setTimestamp();
 
-    return message.channel.send({ embeds: [reapers] });
+    return message.channel.send({ embeds: [languages] });
   }
 };
