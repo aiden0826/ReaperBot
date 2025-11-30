@@ -38,40 +38,9 @@ client.on('clientReady', () => {
   client.user.setActivity('Looking to translate!');
 });
 
-// interaction / slash commands (keep your current logic here)
-// ... your interactionCreate handler code ...
-
 // messageCreate handler (prefix commands AND simple message replies)
 client.on('messageCreate', async (message) => {
-  // debug: confirm handler runs
-  // console.log('messageCreate fired:', message.author.tag, message.content);
-
   if (message.author.bot) return;
-
-  // simple message triggers (keep your existing embed replies)
-  if (message.content === '!reapers') {
-    const reapers = new EmbedBuilder()
-      .setTitle('Reapers')
-      .setURL('https://royaleapi.com/clan/G08QP2PJ')
-      .setDescription('This clan is owned by <@1175955618167795732>.')
-      .setThumbnail('https://cdns3.royaleapi.com/cdn-cgi/image/w=64,h=64,format=auto/static/img/badge/Skull_06.png')
-      .setColor('DarkButNotBlack')
-      .setTimestamp();
-
-    message.channel.send({ embeds: [reapers] });
-    return;
-  }
-
-  if (message.content === '!hey') {
-    const hi = new EmbedBuilder()
-      .setTitle('Hey there!')
-      .setDescription('Hello!')
-      .setColor('DarkButNotBlack')
-      .setTimestamp();
-
-    message.channel.send({ embeds: [hi] });
-    return;
-  }
 
   // prefix commands
   if (!message.content.startsWith(PREFIX)) return;
