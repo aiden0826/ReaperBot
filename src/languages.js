@@ -2,7 +2,7 @@
 module.exports = {
   german: 'DE',
   english: 'EN',
-  spanish: 'ES',
+  spanish: 'ES', 
   french: 'FR',
   italian: 'IT',
   japanese: 'JA',
