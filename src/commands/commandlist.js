@@ -9,7 +9,7 @@ module.exports = {
       .setDescription('List of all available commands.')
       .setColor('DarkButNotBlack')
       .addFields(
-        { name: '.t <language> <text>', value: 'Translates the given text into the specified language.' },
+        { name: '.t [language] [message]', value: 'Translates the given text into the specified language.' },
         { name: '.languages', value: 'Lists all supported languages for translation.' },
         { name: '.commands', value: 'Displays this list of commands.' }
       )

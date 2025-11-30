@@ -10,25 +10,101 @@ module.exports = {
       .setColor('DarkButNotBlack')
       .addFields(
         {
+            name: 'Bulgarian',
+            value: 'BU🇧🇬',
+        },
+        {
+            name: 'Chinese',
+            value: 'ZH🇨🇳',
+        },
+        {
+            name: 'Czech',
+            value: 'CS🇨🇿',
+        },
+        {
+            name: 'Danish',
+            value: 'DA🇩🇰',
+        },
+        {
+            name: 'Dutch',
+            value: 'NL🇳🇱',
+        },
+        {
             name: 'English',
-            value: 'EN',
+            value: 'EN🇬🇧',
         },
         {
-            name: 'Spanish',
-            value: 'ES',
+            name: 'Estonian',
+            value: 'ET🇪🇪',
         },
         {
-            name: 'German',
-            value: 'DE',
+            name: 'Finnish',
+            value: 'FI🇫🇮',
         },
         {
             name: 'French',
-            value: 'FR',
+            value: 'FR🇫🇷',
+        },
+        {
+            name: 'German',
+            value: 'DE🇩🇪',
+        },
+        {
+            name: 'Greek',
+            value: 'EL🇬🇷',
+        },
+        {
+            name: 'Hungarian',
+            value: 'HU🇭🇺',
         },
         {
             name: 'Italian',
-            value: 'IT',
+            value: 'IT🇮🇹',
         },
+        {
+            name: 'Japanese',
+            value: 'JA🇯🇵',
+        },
+        {
+            name: 'Latvian',
+            value: 'LV🇱🇻',
+        },
+        {
+            name: 'Lithuanian',
+            value: 'LT🇱🇹',
+        },
+        {
+            name: 'Polish',
+            value: 'PL🇵🇱',
+        },
+        {
+            name: 'Portuguese',
+            value: 'PT🇵🇹',
+        },
+        {
+            name: 'Romanian',
+            value: 'RO🇷🇴',
+        },
+        {
+            name: 'Russian',
+            value: 'RU🇷🇺',
+        },
+        {
+            name: 'Slovak',
+            value: 'SK🇸🇰',
+        },
+        {
+            name: 'Slovenian',
+            value: 'SL🇸🇮',
+        },
+        {
+            name: 'Spanish',
+            value: 'ES🇪🇸',
+        },
+        {
+            name: 'Swedish',
+            value: 'SV🇸🇪',
+        }
       )
       .setTimestamp();
 

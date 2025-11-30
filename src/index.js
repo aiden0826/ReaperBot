@@ -62,7 +62,7 @@ async function translateText(text, targetLang = "EN") {
 // ---- Bot Ready ----
 client.on('clientReady', () => {
   console.log(`${client.user.tag} is ready!`);
-  client.user.setActivity('Listening for .t');
+  client.user.setActivity('Listening for .commands');
 });
 
 // ---- Auto Translation ----
