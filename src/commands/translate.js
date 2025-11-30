@@ -1,14 +1,20 @@
-// src/commands/translate.js
 const axios = require('axios');
+const languages = require('../languages'); // import the language map
 
 module.exports = {
   name: 't',
   description: 'Translate text using DeepL',
   async execute(message, args) {
-    const target = args[0]?.toLowerCase(); // EN, ES, FR...
+    const targetName = args[0]?.toLowerCase(); // e.g., 'english'
     const text = args.slice(1).join(' ');
-    if (!target || !text) {
-      return message.reply('Usage: `!translate <LANG> <text>` e.g. `!translate EN hola`');
+
+    if (!targetName || !text) {
+      return message.reply('Usage: `!translate <LANGUAGE> <text>` e.g. `!translate English hola`');
+    }
+
+    const target = languages[targetName];
+    if (!target) {
+      return message.reply('Unknown language. Please provide a valid language name.');
     }
 
     try {
@@ -26,7 +32,7 @@ module.exports = {
       const translated = res.data.translations?.[0]?.text;
       if (!translated) throw new Error('No translation returned');
 
-      message.reply(`**Translated (${target}):** ${translated}`);
+      message.reply(`**Translated (${targetName}):** ${translated}`);
     } catch (err) {
       console.error('DeepL error:', err?.response?.data || err.message || err);
       message.reply('Error translating with DeepL.');

@@ -1,0 +1,28 @@
+// Map full language names to DeepL codes
+module.exports = {
+  german: 'DE',
+  english: 'EN',
+  spanish: 'ES',
+  french: 'FR',
+  italian: 'IT',
+  japanese: 'JA',
+  dutch: 'NL',
+  polish: 'PL',
+  portuguese: 'PT',
+  russian: 'RU',
+  chinese: 'ZH',
+  bulgarian: 'BG',
+  czech: 'CS',
+  danish: 'DA',
+  greek: 'EL',
+  estonian: 'ET',
+  finnish: 'FI',
+  hungarian: 'HU',
+  lithuanian: 'LT',
+  latvian: 'LV',
+  romanian: 'RO',
+  slovak: 'SK',
+  slovenian: 'SL',
+  swedish: 'SV',
+};
+
