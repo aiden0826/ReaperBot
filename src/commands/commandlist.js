@@ -1,18 +1,20 @@
-const { Client, IntentsBitField, EmbedBuilder } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
-    name: 'commands',
-    description: 'List all available commands.',
-    async execute (message, args) {
-        const reapers = new EmbedBuilder()
+  name: 'commands',
+  description: 'List all available commands.',
+  async execute (message, args) {
+    const reapers = new EmbedBuilder()
       .setTitle('Commands')
       .setDescription('List of all available commands.')
-      .setThumbnail('https://cdns3.royaleapi.com/cdn-cgi/image/w=64,h=64,format=auto/static/img/badge/Skull_06.png')
       .setColor('DarkButNotBlack')
+      .addFields(
+        { name: '.t <language> <text>', value: 'Translates the given text into the specified language.' },
+        { name: '.languages', value: 'Lists all supported languages for translation.' },
+        { name: '.commands', value: 'Displays this list of commands.' }
+      )
       .setTimestamp();
-      
 
-    message.channel.send({ embeds: [reapers] });
-    return;
-    }
-}
+    return message.channel.send({ embeds: [reapers] });
+  }
+};
